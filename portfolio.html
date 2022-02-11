@@ -14,6 +14,7 @@
 <body>
 
     <!-- Шапка Портфолио -->
+
     <header class="header">
         <div class="conteiner header__conteiner">
             <nav class="header__nav">
@@ -21,13 +22,21 @@
                 <a class="link" href="./index.html">
                     <span class="logo">Web</span><span class="logo-studio">Studio</span></a>
     
+                <button data-menu-open type="button" class="mobile__btn mobile__btn--open ">
+                    <svg class="mobile__icon--open" width="40" height="40">
+                        <use href="imeges/iconsvg.svg#icon-menumobile"></use>
+                    </svg>
+                </button>
+    
+    
+    
+    
                 <ul class="header__list list">
-                    <li class="header__item"><a class="link" href="./index.html">Студия</a></li>
+                    <li class="header__item"><a class="link " href="./index.html">Студия</a></li>
                     <li class="header__item"><a class="link current" href="./portfolio.html" target="_blank">Портфолио</a></li>
                     <li class="header__item"><a class="link" href=".Cotacts.html">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="adress">
             <ul class="header__adress list">
                 <li class="adress__ithem">
                     <a class="link adress__link" href="mailto:info@devstudio.com"><svg class="icon-mail" width="16"
@@ -45,20 +54,70 @@
                     </a>
                 </li>
             </ul>
+    
+            <div data-menu class="mobile is-hidden">
+                <div class="mobile__conteiner">
+                    <div class="mobile__conteiner--close">
+                    <button data-menu-close type="button" class="mobile__btn--close">
+                        <svg class="mobile__icon--open" width="40" height="40">
+                            <use href="imeges/iconsvg.svg#icon-close_40px"></use>
+                        </svg>
+                    </button>
+                    </div>
+    
+    
+    
+                    <ul class="mobile__list list">
+                        <li class="mobile__item"><a class="link " href="./index.html">Студия</a></li>
+                        <li class="mobile__item"><a class="link current__mobile" href="./portfolio.html" target="_blank">Портфолио</a></li>
+                        <li class="mobile__item"><a class="link" href=".Cotacts.html">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile__adress list">
+                        <li class="mobile__adress--ithem">
+                            <a class="link mobile__link--tel" href="tel:+380961111111">
+                                +38 096 111 11 11</a>
+    
+                        </li>
+                        <li class="mobile__adress--ithem">
+                            <a class="link mobile__link--mail" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile__social--list list">
+                        <li class="mobile__social--ithem">
+                            <a class="link mobile__social--link" href="">Instagram</a>
+                        </li>
+                        <li class="mobile__social--ithem">
+                            <a class="link mobile__social--link" href="">Twitter</a>
+                        </li>
+                        <li class="mobile__social--ithem">
+                            <a class="link mobile__social--link" href="">Facebook</a>
+                        </li>
+                        <li class="mobile__social--ithem">
+                            <a class="link mobile__social--link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+    
+                </div>
             </div>
         </div>
     </header>
-
         <!-- Навигация Портфолио -->
 
         <nav>
-            <div class="conteiner">
+            <div class=" conteiner__bnt">
             <ul class="list list-buttons">
-                <li class="buttons-num"><button class="button-ithem" type="button">Все</button></li>
-                <li class="buttons-num"><button class="button-ithem" type="button">Веб-сайты</button></li>
-                <li class="buttons-num"><button class="button-ithem" type="button">Приложения</button></li>
-                <li class="buttons-num"><button class="button-ithem" type="button">Дизайн</button></li>
-                <li class="buttons-num"><button class="button-ithem" type="button">Маркетинг</button></li>
+                <li class="buttons-num">
+                    <button class="button-ithem" type="button">Все</button></li>
+                <li class="buttons-num">
+                    <button class="button-ithem" type="button">Веб-сайты</button></li>
+                <li class="buttons-num">
+                    <button class="button-ithem" type="button">Приложения</button></li>
+                <li class="buttons-num">
+                    <button class="button-ithem" type="button">Дизайн</button></li>
+                <li class="buttons-num">
+                    <button class="button-ithem" type="button">Маркетинг</button></li>
             </ul>
             </div>
         </nav>
@@ -68,7 +127,7 @@
 
         <main>
             <section class="section">
-            <div class="conteiner progects">
+            <div class="progects">
                 
             <h2 class="visually-hidden">Проекты</h2>
 
@@ -76,7 +135,23 @@
                 <li class="progects__list"> 
                 <a href="" class="link">
                     <div class="overlay">
-                    <img src="./imeges/tech.jpg" alt="Фото работ" width="370">
+                        <picture>
+                            <source srcset="./imeges/destkop--tech.jpg 1x,
+                                            ./imeges/destkop--tech-2.jpg 2x"
+                                    media="(min-width: 1200px)">
+
+                            <source srcset="./imeges/porfolio__imeg-texh.jpg 1x,
+                                            ./imeges/porfolio__imeg-texh-2.jpg 2x" 
+                                    media="(min-width: 768px)" >
+
+                            <source srcset="./imeges/mobile--tech.jpg 1x,
+                                            ./imeges/mobile--tech-2.jpg 2x" 
+                                    media="(min-width: 320px)">
+
+                            <img src="./imeges/tech.jpg" alt="Фото работ" width="370">
+                        
+                        </picture>
+                 
                             <div class="conteiner__overlay">
                                 <p class="text__overlay">
                                     Технокряк это современная площадка распространения
@@ -94,7 +169,22 @@
                 <li class="progects__list"> 
                 <a href="" class="link"> 
                     <div class="overlay">
-                    <img src="./imeges/des.jpg" alt="Фото работ" width="370">
+                        <picture>
+                            <source srcset="./imeges/destkop--orlean.jpg 1x,
+                                            ./imeges/destkop--orlean-2.jpg 2x"
+                                            media="(min-width: 1200px)">
+                        
+                            <source srcset="./imeges/porfolio__imeg-orleans.jpg 1x,
+                                            ./imeges/porfolio__imeg-orleans-2.jpg 2x"
+                                            media="(min-width: 768px)">
+                        
+                            <source srcset="./imeges/mobile--orlean.jpg 1x,
+                                            ./imeges/mobile--orlean-2.jpg 2x" 
+                                            media="(min-width: 320px)">
+                        
+                            <img src="./imeges/des.jpg" alt="Фото работ" width="370">
+                        
+                        </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -113,7 +203,23 @@
                 <li class="progects__list"> 
                 <a href="" class="link">
                     <div class="overlay">
-                    <img src="./imeges/seaf.jpg" alt="Фото работ" width="370">
+
+                    <picture>
+                        <source srcset="./imeges/destkop--seafod-2.jpg 1x,
+                                        ./imeges/destkop--seafod--2.jpg 2x" 
+                                        media="(min-width: 1200px)">
+                    
+                        <source srcset="./imeges/res-seafood.jpg 1x,
+                                        ./imeges/res-seafood--2.jpg 2x" 
+                                        media="(min-width: 768px)">
+                    
+                        <source srcset="./imeges/mobile--seafood.jpg 1x,
+                                        ./imeges/mobile--seafood-2.jpg 2x" 
+                                        media="(min-width: 320px)">
+                    
+                        <img src="./imeges/seaf.jpg" alt="Фото работ" width="370">
+                    
+                    </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -132,7 +238,23 @@
                 <li class="progects__list"> 
                 <a href="" class="link">
                     <div class="overlay">
-                    <img src="./imeges/prim.jpg" alt="Фото работ" width="370">
+
+                        <picture>
+                            <source srcset="./imeges/destkop--prime.jpg 1x,
+                                            ./imeges/destkop--prime-2.jpg 2x" 
+                                            media="(min-width: 1200px)">
+                        
+                            <source srcset="./imeges/pr--prime.jpg 1x,
+                                            ./imeges/pr--prime--2.jpg 2x" 
+                                            media="(min-width: 768px)">
+                        
+                            <source srcset="./imeges/mobile--prime.jpg 1x,
+                                            ./imeges/mobile--prime-2.jpg 2x" 
+                                            media="(min-width: 320px)">
+                        
+                            <img src="./imeges/prim.jpg" alt="Фото работ" width="370">
+                        
+                        </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -151,7 +273,23 @@
                 <li class="progects__list"> 
                 <a href="" class="link">
                     <div class="overlay">
-                    <img src="./imeges/boxe.jpg" alt="Фото работ" width="370">
+
+                            <picture>
+                                <source srcset="./imeges/destkop--boxes-2.jpg 1x,
+                                                ./imeges/destkop--boxes.jpg 2x" 
+                                                media="(min-width: 1200px)">
+                            
+                                <source srcset="./imeges/pr-boxes-.jpg 1x,
+                                                ./imeges/pr-boxes--2.jpg 2x" 
+                                                media="(min-width: 768px)">
+                            
+                                <source srcset="./imeges/mobile--boxes.jpg 1x,
+                                                ./imeges/mobile--boxes-2.jpg 2x"
+                                                 media="(min-width: 320px)">
+                            
+                                <img src="./imeges/boxe.jpg.jpg" alt="Фото работ" width="370">
+                            
+                            </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -170,7 +308,23 @@
                 <li class="progects__list"> 
                 <a href="" class="link">
                     <div class="overlay">
-                    <img src="./imeges/bord.jpg" alt="Фото работ" width="370">
+
+                                <picture>
+                                    <source srcset="./imeges/destkop--borders-2.jpg 1x,
+                                                    ./imeges/destkop--borders.jpg 2x" 
+                                                    media="(min-width: 1200px)">
+                                
+                                    <source srcset="./imeges/no-borders.jpg 1x,
+                                                    ./imeges/no-borders--2.jpg 2x" 
+                                                    media="(min-width: 768px)">
+                                
+                                    <source srcset="./imeges/mobile--border.jpg 1x,
+                                                    ./imeges/mobile--border-2.jpg 2x" 
+                                                    media="(min-width: 320px)">
+                                
+                                    <img src="./imeges/bord.jpg.jpg" alt="Фото работ" width="370">
+                                
+                                </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -189,7 +343,24 @@
                 <li class="progects__list">
                     <a href="" class="link">
                         <div class="overlay">
-                    <img src="./imeges/photoind.jpg" alt="Фото работ" width="370">
+
+                                        <picture>
+                                            <source srcset="./imeges/destkop--limed.jpg 1x,
+                                                            ./imeges/destkop--limed-2.jpg 2x" 
+                                                            media="(min-width: 1200px)">
+                                        
+                                            <source srcset="./imeges/lim-edit.jpg 1x,
+                                                            ./imeges/lim-edit--2.jpg 2x" 
+                                                            media="(min-width: 768px)">
+                                        
+                                            <source srcset="./imeges/mobile--limed.jpg 1x,
+                                                            ./imeges/mobile--limed-2.jpg 2x" 
+                                                            media="(min-width: 320px)">
+                                        
+                                            <img src="./imeges/photoind.jpg.jpg" alt="Фото работ" width="370">
+                                        
+                                        </picture>
+            
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -208,7 +379,24 @@
                 <li class="progects__list">
                     <a href="" class="link">
                         <div class="overlay">
-                    <img src="./imeges/Lab.jpg" alt="Фото работ" width="370">
+
+                                    <picture>
+                                        <source srcset="./imeges/destkop--lab.jpg 1x,
+                                                        ./imeges/destkop--lab-2.jpg 2x"
+                                                        media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./imeges/img-lab.jpg 1x,
+                                                        ./imeges/img-lab--2.jpg 2x" 
+                                                        media="(min-width: 768px)">
+                                    
+                                        <source srcset="./imeges/mobile--lab.jpg 1x,
+                                                        ./imeges/mobile--lab-2.jpg 2x"
+                                                        media="(min-width: 320px)">
+                                    
+                                        <img src="./imeges/Lab.jpg.jpg" alt="Фото работ" width="370">
+                                    
+                                    </picture>
+        
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -227,7 +415,22 @@
                 <li class="progects__list">
                     <a href="" class="link">
                         <div class="overlay">
-                    <img src="./imeges/append.jpg" alt="Фото работ" width="370">
+                                    <picture>
+                                        <source srcset="./imeges/destkop--growing.jpg 1x,
+                                                        ./imeges/destkop--growing-2.jpg 2x"
+                                                        media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./imeges/growing.jpg 1x,
+                                                        ./imeges/growing--2.jpg 2x" 
+                                                        media="(min-width: 768px)">
+                                    
+                                        <source srcset="./imeges/mobile--growing.jpg 1x,
+                                                        ./imeges/mobile--growing-2.jpg 2x" 
+                                                        media="(min-width: 320px)">
+                                    
+                                        <img src="./imeges/append.jpg.jpg" alt="Фото работ" width="370">
+                                    
+                                    </picture>
                     <div class="conteiner__overlay">
                         <p class="text__overlay">
                             Технокряк это современная площадка распространения
@@ -248,60 +451,65 @@
         </main>
         
 <footer class="footer">
-    <div class="conteiner footer__backgraund ">
-        <div class="footer__left">
-            <a class="link" href="/index.html">
-                <span class="logo">Web</span><span class="logo__footer">Studio</span>
-            </a>
-            <address class="footer__adress">
-                <ul class="list">
-                    <li class=""><a class="link ithem__adress--color" href="https://goo.gl/maps/Gu5Dw9EAoeBzcQZ39">г.
-                            Киев, пр-т Леси Украинки,26</a></li>
-                    <li class=""><a class="link ithem__adress" href="meilto:info@example.com">info@example.com</a></li>
-                    <li class=""><a class="link ithem__adress" href="tel:+380991111111">+38 099 111 11
-                            11</a></li>
+    <div class="footer__backgraund footer__backgraund--progects ">
+        <div class="footer__conteiners--centr">
+            <div class="footer__left">
+                <a class="link" href="/index.html">
+                    <span class="logo">Web</span><span class="logo__footer">Studio</span>
+                </a>
+                <address class="adress">
+                    <ul class="list adress__list">
+                        <li class=""><a class="link ithem__adress--color"
+                                href="https://goo.gl/maps/Gu5Dw9EAoeBzcQZ39">г.
+                                Киев, пр-т Леси Украинки,26</a></li>
+                        <li class=""><a class="link ithem__adress" href="meilto:info@example.com">info@example.com</a>
+                        </li>
+                        <li class=""><a class="link ithem__adress" href="tel:+380991111111">+38 099 111 11
+                                11</a></li>
+                    </ul>
+
+                </address>
+            </div>
+            <div class="footer__center">
+                <p class="join">присоединяйтесь</p>
+                <ul class="list center__list">
+                    <li class="list center__items">
+                        <a class="link join--link" href="">
+                            <svg class="team__icon" width="20" height="20">
+                                <use href="imeges/iconsvg.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="list center__items">
+                        <a class="link join--link" href="">
+                            <svg class="team__icon">
+                                <use href="imeges/iconsvg.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list center__items">
+                        <a class="link join--link" href="">
+                            <svg class="team__icon">
+                                <use href="imeges/iconsvg.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="list center__items">
+                        <a class="link join--link" href="">
+                            <svg class="team__icon">
+                                <use href="imeges/iconsvg.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
-
-            </address>
-        </div>
-        <div class="footer__center">
-            <p class="join">присоединяйтесь</p>
-            <ul class="list center__list">
-                <li class="list center__items">
-                    <a class="link join--link" href="">
-                        <svg class="team__icon" widht="20" height="20">
-                            <use href="imeges/iconsvg.svg#icon-instagram">
-                        </svg>
-                    </a>
-                </li>
-
-                <li class="list center__items">
-                    <a class="link join--link" href="">
-                        <svg class="team__icon">
-                            <use href="imeges/iconsvg.svg#icon-twitter">
-                        </svg>
-                    </a>
-                </li>
-                <li class="list center__items">
-                    <a class="link join--link" href="">
-                        <svg class="team__icon">
-                            <use href="imeges/iconsvg.svg#icon-facebook">
-                        </svg>
-                    </a>
-                </li>
-                <li class="list center__items">
-                    <a class="link join--link" href="">
-                        <svg class="team__icon">
-                            <use href="imeges/iconsvg.svg#icon-linkedin">
-                        </svg>
-                    </a>
-                </li>
+            </div>
         </div>
         <div class="footer__right">
             <div class="right__conteiner">
                 <p class="join">Подпишитесь на рассылку</p>
-                <label for="mail-fotter">
-                    <input class="input-mail" type="mail-fotter" id="mail-fotter" name="mail-fotter"
+                <label class="right__mail--footer" for="mail-fotter">
+                    <input class="input-mail" type="text" id="mail-fotter" name="mail-fotter"
                         placeholder="E-mail">
                 </label>
             </div>
@@ -315,8 +523,9 @@
 
     </div>
 
-    </div>
 </footer>
+
+<script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>
